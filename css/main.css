@@ -10,14 +10,56 @@
 .text-section{
     text-align: center;
 }
-
 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     width: 80%;
+}
+.form-control{
+
+}
+.searchButton{
+
+}
+.img-container{
+    margin: auto;
+    width: 80%;
+    padding:20;
+    text-align: center;
+    margin-top: 1%;
+}
+img{
+    max-width: 100%;
+}
+
+.img-border{
+    padding:1px;
+    border:1px solid #4d4d4d;
+    background-color:#fff;
+    
 }
 
 #university-list{
     margin-top:30px;
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width:70%;
+     margin-left:15%;
+     margin-right:15%; 
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+footer{ text-align: center;}
