@@ -15,6 +15,14 @@
     margin: auto;
     width: 80%;
 }
+
+.chartContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+}
 .form-control{
     width:50%;
     border: 2px solid #aaa;

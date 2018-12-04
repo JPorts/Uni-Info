@@ -1,7 +1,3 @@
-<?php 
-  include '../php/getUniList.php'
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../css/navbar.css">
   <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <link rel="stylesheet" type="text/css" href="../js/uniList.js">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <title>Uni info</title>
@@ -46,25 +43,42 @@
         Here is a list of links to tertiary education institutions operating in the United Kingdom.
       </p>
     </section>
-
+  </div>
+  <div class="container">
     <section id=universities>
       <!-- Fill University list with URLs-->
-      <div id="uni-lookup">
-     
-      </div>
+      <table id="universityTable" class="setHidden">
+
+      <thead>
+      <tr>
+        <th>
+          University
+        </th>
+        <th>
+          Website Link
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
     </section>
 
   </div>
-
+</div>
   <footer>
     <p> Uni-Info 2018 &copy; </p>
   </footer>
 
 
   <script src="../js/main.js"></script>
-  <script>
-     var unis = <?php echo UniApi() ?>;
-    </script>
+  <script src="../js/uniList.js"></script>
+ 
+  <script> 
+
+
+     </script>
 </body>
 
 </html>

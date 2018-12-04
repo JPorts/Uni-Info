@@ -32,7 +32,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-links">
       <a href="index.html" target="">Home</a>
-      <a href="Universities.php" target="">Universities</a>
+      <a href="Universities.html" target="">Universities</a>
       <a href="jobInformation.html" target="">Job Information</a>
     </div>
   </div>
@@ -47,7 +47,123 @@
   <!-- Subject Dropdown Menu -->
   <!-- JS Will handle this functionality -->
   <div class="container">
+    <!-- Dropdown-->
+    <select class="dropdown" id="subjectdropdown" onchange="getSelectedValue();">
+      <option class="dropdown-content" id="infoTech" value="infoTech">Information Technology</option>
+      <option class="dropdown-content" id="education" value="education">Education</option>
+      <option class="dropdown-content" id="engmancon" value="engmancon">Engineering, Manufacturing & Construction</option>
+      <option class="dropdown-content" id="humanitiesArts" value="humanitiesArts">Humanities & Arts</option>
+      <option class="dropdown-content" id="healthwelf" value="healthwelf">Health & Welfare</option>
+      <option class="dropdown-content" id="sciences" value="sciences">Sciences</option>
+      <option class="dropdown-content" id="services" value="services">Services</option>
+      <option class="dropdown-content" id="socialbusinesslaw" value="socialbusinesslaw">Social Sciences, Business & Law</option>
+    </select>
+  </div>
 
+
+  <!-- Enrolment Chart-->
+  <section id="enrolmentChartSection">
+    <div class="chartContainer">
+      <!-- Display Charts & Graphs -->
+      <canvas id="enrolmentChart"></canvas>
+    </div>
+  </section>
+
+
+  <!-- Subject Chart-->
+  <section id="subjectChart">
+    <div class="chartContainer">
+      <!-- Display Charts & Graphs -->
+      <canvas id="subjectChart"></canvas>
+    </div>
+  </section>
+
+  <footer>
+    <p> Uni-Info 2018 &copy; </p>
+  </footer>
+
+</body>
+<script src="../js/subjectAreas.js"></script>
+<script>
+  // When Document is ready
+  $(document).ready(function () {
+
+    var enrolmentChart = document.getElementById('enrolmentChart').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+
+    // Chart for % of students studying in tertiary subject area //
+
+    var tertiaryEnrolmentChart = new Chart(enrolmentChart, {
+      type: 'bar', // Type could be bar, horizontal-bar, pie, line, doughnut, radar, polarArea
+      data: {
+        labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+        datasets: [{
+          label: 'Student Enrolment',
+            data: [
+              2415222,
+              2479197,
+              2492284,
+              2495779,
+              2386199,
+              2352933,
+              2330334
+            
+        ],
+
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth: 1,
+          borderColor: '#777',
+          hoverBorderWidth: 3,
+          hoverBorderColor: '#000'
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Student Enrolment Over Time',
+          fontSize: 25
+        },
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontColor: '#000'
+          }
+        },
+        layout: {
+          padding: {
+            left: 0,
+            right: 0,
+            bottom: 0,
+            top: 0
+          }
+        },
+        tooltips: {
+          enabled: true
+        }
+      }
+    });
+
+  });
+</script>
+
+</html>
+
+<!-- 
     <div class="dropdown">
       <button class="dropbtn">Subject Areas</button>
       <div class="dropdown-content">
@@ -57,31 +173,8 @@
         <a href="humanitiesArts.html" id="humanitiesArts">Humanities and Arts</a>
         <a href="healthwelf.html" id="healthwelf">Health and Welfare</a>
         <a href="sciences.html" id="sciences">Sciences</a>
-        <a href="services.html" id=services>Services</a>
-        <a href="socialbusinesslaw.html" id=socialbusinesslaw>Social Sciences, Business & Law</a>
+        <a href="services.html" id="services">Services</a>
+        <a href="socialbusinesslaw.html" id="socialbusinesslaw">Social Sciences, Business & Law</a>
       </div>
     </div>
-  </div>
-
-
-      <div class="container">
-        <!-- Display Charts & Graphs -->
-        <canvas id="enrolmentChart"></canvas>
-      </div>
-
-
-  <section id="subjectChart">
-      <div class="container">
-        <!-- Display Charts & Graphs -->
-        <canvas id="subjectChart"></canvas>
-      </div>
-    </section>
-
-  <footer>
-    <p> Uni-Info 2018 &copy; </p>
-  </footer>
-
-</body>
-<script src="../js/subjectAreas.js"></script>
-
-</html>
+  </div> -->
