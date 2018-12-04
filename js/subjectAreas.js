@@ -1,7 +1,8 @@
+// When Document is ready
+$(document).ready(function(){
 
+  var enrolmentChart = document.getElementById('enrolmentChart').getContext('2d');
 
-var enrolmentChart = document.getElementById('enrolmentChart').getContext('2d');
-console.log()
   // Global Options
   Chart.defaults.global.defaultFontFamily = 'Lato';
   Chart.defaults.global.defaultFontSize = 18;
@@ -11,7 +12,7 @@ console.log()
 // Chart for % of students studying in tertiary subject area //
 
 var tertiaryEnrolmentChart = new Chart(enrolmentChart, {
-    type: bar, // Type could be bar, horizontal-bar, pie, line, doughnut, radar, polarArea
+    type: 'bar', // Type could be bar, horizontal-bar, pie, line, doughnut, radar, polarArea
     data: {
         labels: ['2009','2010','2011','2012','2013','2014','2015'],
         datasets:[{
@@ -24,8 +25,8 @@ var tertiaryEnrolmentChart = new Chart(enrolmentChart, {
                 2492284,
                 2495779,
                 2386199,
-                2352932.78,
-                2330334.48
+                2352933,
+                2330334
               ]
              }],
 
@@ -48,12 +49,12 @@ var tertiaryEnrolmentChart = new Chart(enrolmentChart, {
     options:{
         title:{
           display:true,
-          text:'Student Enrolment over Time',
+          text:'Student Enrolment Over Time',
           fontSize:25
         },
         legend:{
-          display:true,
-          position:'right',
+          display:false,
+          position:'top',
           labels:{
             fontColor:'#000'
           }
@@ -72,12 +73,8 @@ var tertiaryEnrolmentChart = new Chart(enrolmentChart, {
       }
     });
 
+});
 
-       // Drop down stuff for subject areas
-       $('.dropdown-content').find('a').on('click', function(e){
-        e.preventDefault();
-
-     });
 
      // Perform Tertiary Enrolment Search 
      function performTertiaryEnrolmentSearch(){
@@ -235,5 +232,13 @@ $(function () {
   $('#sciences').on('click', performSciencesSearch);
   $('#services').on('click', performServicesSearch);
   $('#socialBusinessLaw').on('click', performSocialBusinessLawSearch);
+
+
+         // Drop down stuff for subject areas
+ $('.dropdown-content').find('a').on('click', function(e){
+    e.preventDefault();
+  
+  });
+  
 });
 
