@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
   <link rel="stylesheet" type="text/css" href="../css/text-section.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/jobinformation.js"></script>
   <title>Job Information</title>
 </head>
 
@@ -34,17 +37,26 @@
     </div>
   </div>
 
-  <!-- Search Box -->
-  <div class="">
-    <input class="form-control" type="text" id="searchteam" placeholder="Search...">
-    <button class="searchButton" id="Search">Search</button>
-  </div>
+  <!-- Section -->
+  <section>
+    <div class="container">
+      <p>
+       Search for jobs in your industry
+      </p>
+    </div>
+  </section>
 
-  <table>
+  <!-- Search Box for Jobs -->
+  <div class="container">
+    <input class="form-control" type="text" id="job-search-term" placeholder="Search...">
+    <button class="searchButton" id="jobSearch">Search</button>
+  </div>
+ <!-- Table for Jobs-->
+  <table id="jobstable">
     <thead>
       <tr>
         <th>
-          Job Title / Role
+          Job Title
         </th>
         <th>
           SOC Code
@@ -52,16 +64,54 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
 
-        </td>
-        <td>
-
-        </td>
-      </tr>
     </tbody>
   </table>
+  <br/>
+    <!-- Section -->
+    <section>
+        <div class="container">
+          <p>
+           Search for Jobs associated with your desired career pathway
+          </p>
+        </div>
+      </section>
+  <!-- Search Box for Jobs -->
+  <div class="container">
+      <input class="form-control" type="text" id="apprentice-search-term" placeholder="Search...">
+      <button class="searchButton" id="apprenticeSearch">Search</button>
+    </div>
+   <!-- Table for Apprenticeships-->
+    <table id="apprenticetable">
+      <thead>
+        <tr>
+          <th>
+            Apprenticeship
+          </th>
+          <th>
+            SOC Code
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+  sample
+          </td>
+          <td>
+  sample
+          </td>
+        </tr>
+        <tr>
+            <td>
+    sample
+            </td>
+            <td>
+    sample
+            </td>
+          </tr>
+      </tbody>
+    </table>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
