@@ -41,7 +41,7 @@
   <section>
     <div class="container">
       <p>
-       Search for jobs in your industry
+        Search for jobs in your industry
       </p>
     </div>
   </section>
@@ -51,8 +51,8 @@
     <input class="form-control" type="text" id="job-search-term" placeholder="Search...">
     <button class="searchButton" id="jobSearch">Search</button>
   </div>
- <!-- Table for Jobs-->
-  <table id="jobstable">
+  <!-- Table for Jobs-->
+  <table id="jobstable" class="setHidden">
     <thead>
       <tr>
         <th>
@@ -67,51 +67,47 @@
 
     </tbody>
   </table>
-  <br/>
-    <!-- Section -->
-    <section>
-        <div class="container">
-          <p>
-           Search for Jobs associated with your desired career pathway
-          </p>
-        </div>
-      </section>
+  <br />
+  <!-- Section -->
+  <section>
+    <div class="container">
+      <p>
+        Search the SOC code to find more information associated with your desired career pathway
+      </p>
+    </div>
+  </section>
   <!-- Search Box for Jobs -->
   <div class="container">
-      <input class="form-control" type="text" id="apprentice-search-term" placeholder="Search...">
-      <button class="searchButton" id="apprenticeSearch">Search</button>
-    </div>
-   <!-- Table for Apprenticeships-->
-    <table id="apprenticetable">
-      <thead>
-        <tr>
-          <th>
-            Apprenticeship
-          </th>
-          <th>
-            SOC Code
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-  sample
-          </td>
-          <td>
-  sample
-          </td>
-        </tr>
-        <tr>
-            <td>
-    sample
-            </td>
-            <td>
-    sample
-            </td>
-          </tr>
-      </tbody>
-    </table>
+    <input class="form-control" type="text" id="soc-search-term" placeholder="Search...">
+    <button class="searchButton" id="socSearch">Search</button>
+  </div>
+  <!-- Table for SOC code Search-->
+  <table id="socCodeTable" class="setHidden">
+    <thead>
+      <tr>
+        <th>
+          Title
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Qualifications
+        </th>
+        <th>
+          Tasks
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+  <footer>
+      <p> Uni-Info 2018 &copy; </p>
+    </footer>
+  
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>

@@ -40,11 +40,6 @@ $(document).ready(function(){
   
 
 
-       // Drop down stuff for subject areas
-       $('.dropdown-content').find('a').on('click', function(e){
-           e.preventDefault();
-
-        });
 
 
             // Create var for uni-lookup html

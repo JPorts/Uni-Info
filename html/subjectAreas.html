@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="../css/subjectdropdown.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+  <script src="../js/subjectAreas.js"></script>
   <title>Subject Areas</title>
 </head>
 
@@ -50,23 +51,31 @@
     <div class="dropdown">
       <button class="dropbtn">Subject Areas</button>
       <div class="dropdown-content">
-        <a href="agriculture.html">Agriculture</a>
-        <a href="education.html">Education</a>
-        <a href="engmancon.html">Engineering, Manufacturing & Construction</a>
-        <a href="humanitiesArts.html">Humanities and Arts</a>
-        <a href="healthwelf.html">Health and Welfare</a>
-        <a href="sciences.html">Sciences</a>
-        <a href="services.html">Services</a>
-        <a href="socialbusinesslaw.html">Social Sciences, Business & Law</a>
+        <a href="agriculture.html" id="agriculture">Agriculture</a>
+        <a href="education.html" id="education">Education</a>
+        <a href="engmancon.html" id="engmancon">Engineering, Manufacturing & Construction</a>
+        <a href="humanitiesArts.html" id="humanitiesArts">Humanities and Arts</a>
+        <a href="healthwelf.html" id="healthwelf">Health and Welfare</a>
+        <a href="sciences.html" id="sciences">Sciences</a>
+        <a href="services.html" id=services>Services</a>
+        <a href="socialbusinesslaw.html" id=socialbusinesslaw>Social Sciences, Business & Law</a>
       </div>
     </div>
-
   </div>
-  <section id="charts">
-  <!-- Display Charts & Graphs -->
-  <canvas id="subjectChart"></canvas>
 
-</section>
+
+      <div class="container">
+        <!-- Display Charts & Graphs -->
+        <canvas id="enrolmentChart"></canvas>
+      </div>
+
+
+  <section id="subjectChart">
+      <div class="container">
+        <!-- Display Charts & Graphs -->
+        <canvas id="subjectChart"></canvas>
+      </div>
+    </section>
 
   <footer>
     <p> Uni-Info 2018 &copy; </p>

@@ -1,11 +1,15 @@
-
-
-function performJobSearch(){
-
+function performJobSearch() {
+    //Add CSS class visible, Remove hidden class
+    $("table:first").addClass("setVisible");
+    $("table:first").removeClass("setHidden");
+    //Remove Rows from any previous search
     $("#jobstable").find("tr:gt(0)").remove();
-    var jobSearhURL = 'http://api.lmiforall.org.uk/api/v1/soc/search?q=';
+    // Search URL
+    var jobSearchURL = 'http://api.lmiforall.org.uk/api/v1/soc/search?q=';
+    // Pull Search Terms 
     var searchTerms = $('#job-search-term').val();
-    $.getJSON(jobSearhURL + searchTerms, function(result){
+    // Get result and append to table
+    $.getJSON(jobSearchURL + searchTerms, function (result) {
         //console.log(result);
         result.forEach(results => {
             var row = $("<tr></tr>");
@@ -22,17 +26,46 @@ function performJobSearch(){
     });
 }
 
-$(function removeTableRows()
-  {
-  $('table tr').not(':nth-child(1)').remove()
-});
+function performSOCSearch() {
+    //Add CSS class visible, Remove hidden class
+     $('#socCodeTable').addClass("setVisible");
+     $('#socCodeTable').removeClass("setHidden");
+    //Remove Rows from any previous search
+    $("#socCodeTable").find("tr:gt(0)").remove();
+    var socSearchURL = 'http://api.lmiforall.org.uk/api/v1/soc/code/';
+    //Pull Search Terms
+    var searchTerms = $("#soc-search-term").val();
+    //Get result and append to table
+    $.getJSON(socSearchURL + searchTerms, function (result) {
 
 
-function performApprenticeSearch(){
-    var apprenticeSearhURL = '';
+        Object.keys(result).forEach(function (key){
+            console.log(Object.values(result));
+
+            var row = $("<tr></tr>");
+            var SOCTitleCell = $("<td></td>")
+            var descriptionCell = $("<td></td>")
+            var qualificationsCell = $("<td></td>")
+            var tasksCell = $("<td></td>")
+
+            SOCTitleCell.html(result.title);
+            descriptionCell.html(result.description);
+            qualificationsCell.html(result.qualifications);
+            tasksCell.html(result.tasks);
+            //Append to row
+            row.append(SOCTitleCell);
+            row.append(descriptionCell);
+            row.append(qualificationsCell);
+            row.append(tasksCell);
+            
+            $('#socCodeTable tbody').append(row);
+        });
+
+    });
+
 }
 
-$(function(){
+$(function () {
     $('#jobSearch').on('click', performJobSearch);
-    $('#apprenticeSearch').on('click', performApprenticeSearch);
+    $('#socSearch').on('click', performSOCSearch);
 });
