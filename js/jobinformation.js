@@ -24,6 +24,7 @@ function performJobSearch() {
 
         });
     });
+    removeExtraRows();
 }
 
 function performSOCSearch() {
@@ -62,6 +63,7 @@ function performSOCSearch() {
         });
 
     });
+    removeExtraRows();
 
 }
 
@@ -69,3 +71,8 @@ $(function () {
     $('#jobSearch').on('click', performJobSearch);
     $('#socSearch').on('click', performSOCSearch);
 });
+
+function removeExtraRows(){
+    $("#socCodeTable").find("tr:gt(1)").remove();
+
+}

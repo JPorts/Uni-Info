@@ -43,22 +43,12 @@
         Choose a subject area for more information.
       </p>
     </div>
+    <div class="container">
+        <p>
+            Choosing a subject area will display a chart showing percentage of students enrolled in that subject area. 
+        </p>
+    </div>
   </section>
-  <!-- Subject Dropdown Menu -->
-  <!-- JS Will handle this functionality -->
-  <div class="container">
-    <!-- Dropdown-->
-    <select class="dropdown" id="subjectdropdown" onchange="getSelectedValue();">
-      <option class="dropdown-content" id="infoTech" value="infoTech">Information Technology</option>
-      <option class="dropdown-content" id="education" value="education">Education</option>
-      <option class="dropdown-content" id="engmancon" value="engmancon">Engineering, Manufacturing & Construction</option>
-      <option class="dropdown-content" id="humanitiesArts" value="humanitiesArts">Humanities & Arts</option>
-      <option class="dropdown-content" id="healthwelf" value="healthwelf">Health & Welfare</option>
-      <option class="dropdown-content" id="sciences" value="sciences">Sciences</option>
-      <option class="dropdown-content" id="services" value="services">Services</option>
-      <option class="dropdown-content" id="socialbusinesslaw" value="socialbusinesslaw">Social Sciences, Business & Law</option>
-    </select>
-  </div>
 
 
   <!-- Enrolment Chart-->
@@ -69,14 +59,41 @@
     </div>
   </section>
 
+    <!-- Subject Dropdown Menu -->
+  <!-- JS Will handle this functionality -->
+  <div class="container">
+      <!-- Dropdown-->
+      <select class="dropdown" id="subjectdropdown" onchange="getSelectedValue();">
+        <option class="dropdown-content" id="infoTech" value="infoTech">Information Technology</option>
+        <option class="dropdown-content" id="education" value="education">Education</option>
+        <option class="dropdown-content" id="engmancon" value="engmancon">Engineering, Manufacturing & Construction</option>
+        <option class="dropdown-content" id="humanitiesArts" value="humanitiesArts">Humanities & Arts</option>
+        <option class="dropdown-content" id="healthwelf" value="healthwelf">Health & Welfare</option>
+        <option class="dropdown-content" id="sciences" value="sciences">Sciences</option>
+        <option class="dropdown-content" id="services" value="services">Services</option>
+        <option class="dropdown-content" id="socialbusinesslaw" value="socialbusinesslaw">Social Sciences, Business & Law</option>
+      </select>
+    </div>
 
   <!-- Subject Chart-->
-  <section id="subjectChart">
-    <div class="chartContainer">
+  <section id="subjectChartSection">
+    <div class="chartContainer" id="subjectChartContainer">
       <!-- Display Charts & Graphs -->
-      <canvas id="subjectChart"></canvas>
+
     </div>
   </section>
+
+  <!-- <div class="container">
+      <select id="chartTypedropdown" onchange="change();">
+          <option value="bar">Bar Chart</option>
+          <option value="radar">Radar Chart</option>
+          <option value="line">Line Chart</option>
+          <option value="doughnut">Doughnut Chart</option>
+          <option value="pie">Pie Chart</option>
+        </select>
+  </div> -->
+
+
 
   <footer>
     <p> Uni-Info 2018 &copy; </p>
@@ -163,18 +180,3 @@
 
 </html>
 
-<!-- 
-    <div class="dropdown">
-      <button class="dropbtn">Subject Areas</button>
-      <div class="dropdown-content">
-        <a href="agriculture.html" id="agriculture">Agriculture</a>
-        <a href="education.html" id="education">Education</a>
-        <a href="engmancon.html" id="engmancon">Engineering, Manufacturing & Construction</a>
-        <a href="humanitiesArts.html" id="humanitiesArts">Humanities and Arts</a>
-        <a href="healthwelf.html" id="healthwelf">Health and Welfare</a>
-        <a href="sciences.html" id="sciences">Sciences</a>
-        <a href="services.html" id="services">Services</a>
-        <a href="socialbusinesslaw.html" id="socialbusinesslaw">Social Sciences, Business & Law</a>
-      </div>
-    </div>
-  </div> -->

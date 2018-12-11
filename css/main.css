@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 70%;
+    width: 60%;
 }
 .form-control{
     width:50%;
@@ -76,6 +76,16 @@ img{
 #university-list{
     margin-top:30px;
 }
+#subjectChartSection{
+    margin-bottom: 5%;
+}
+#subjectdropdown{
+    margin-top:5%;
+    margin-bottom:5%;
+}
+#chartTypedropdown{
+    margin-bottom:5%;
+}
 
 table {
     font-family: arial, sans-serif;
@@ -111,4 +121,16 @@ footer{
 
 .setHidden{
     visibility: hidden;    
+}
+
+@media (max-width:768px){
+
+    .chartContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 70%;
+    }
+
 }
